@@ -24,17 +24,17 @@
 
 3. Instalar Google Chrome [Google Chrome](https://www.google.com.mx/intl/es-419/chrome/?brand=CHBD&gclid=Cj0KCQiAtrnuBRDXARIsABiN-7AAMm13Ae3KDIib46Laxfe6tzD_w4yvDdpq5XsPw1eNlOkZ_0-3x3IaAvLEEALw_wcB&gclsrc=aw.ds)
 
-## Extensiones de VSCode
+### Extensiones de VSCode
 
 [Activitus Bar](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.activitusbar)
 
 [TypeScript importer](https://marketplace.visualstudio.com/items?itemName=pmneo.tsimporter)
 
-## Extensiones de Chrome
+### Extensiones de Chrome
 
 [Json Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe)
 
-### Configuración del Bracket Pair Colorizer 2
+#### Configuración del Bracket Pair Colorizer 2
 
 [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 ```
@@ -47,7 +47,7 @@
     "#C497D4"
 ],
 ```
-### Tema que estoy usando en VSCode:
+#### Tema que estoy usando en VSCode:
 
 * [Monokai Night](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-monokai-night)
 
