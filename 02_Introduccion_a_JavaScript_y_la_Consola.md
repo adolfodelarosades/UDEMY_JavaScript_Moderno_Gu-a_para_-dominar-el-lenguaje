@@ -153,7 +153,7 @@ Vemos como interpreta el contenido JS de nuestro archivo.
 </html>
 ```
 
-### 5. Hola Mundo Importando Archiivo JS Desde un Archivo HTML
+### 5. Hola Mundo Importando Archivo JS Desde un Archivo HTML
 
 ```html
 <!DOCTYPE html>
@@ -171,7 +171,20 @@ Al abrir el archivo con el navegador y ver la Consola, veremos el mensaje `Hola 
 
 Aun que `<script src="app.js"></script>` puede ir dentro de la etiqueta `<head>` es recomendable ponerlo antes de cerrar la etiqueta body `</body>` para que se cargue todo nuestro código HTML y después los archivos JS evitando bloquear la página.
 
-## Introducción a variables y comentarios 12:47
+## Introducción a Variables y Comentarios 12:47
+
+### Comentarios
+
+Son líneas de código que el intérprete de JS ignorará a la hora de ejecutarse. Existen dos tipos
+
+* **`//`** En VSC se añade con `Ctrl+K Ctrl+C` y se quitan con `Ctrl+K Ctrl+U`
+
+* **`/* */`** En VSC se añade o se quitan en un bloque con `Shift + Alt + A` 
+
+
+
+
+
 
 ## Introducción a la consola 10:10
 
