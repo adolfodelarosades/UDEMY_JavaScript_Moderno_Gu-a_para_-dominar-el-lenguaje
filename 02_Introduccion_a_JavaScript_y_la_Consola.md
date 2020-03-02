@@ -181,8 +181,67 @@ Son líneas de código que el intérprete de JS ignorará a la hora de ejecutars
 
 * **`/* */`** En VSC se añade o se quitan en un bloque con `Shift + Alt + A` 
 
+### Variables
 
+Es un contenedor de información que apunta a un lugar en memoria. Dicha información puede cambiar en un futuro.
 
+Las tres formas de apunta a un lugar en memoria en JS es con:
+
+```js
+let a = 10;
+var b = 10;
+const c = 10;
+```
+
+**`const`** Nos va a permitir definir **Constantes** es decir que **NO** puede cambiar su valor posteriormente, si lo intento: 
+
+```js
+c = 100;
+```
+
+En la consola me marcara el siguiente error:
+
+```sh
+app.js:7 Uncaught TypeError: Assignment to constant variable.
+    at app.js:7
+```    
+
+**`let`** y **`var`** Nos permiten definir **Variables** es decir que **SI** puede cambiar su valor posteriormente, si lo intento: 
+
+```js
+a = 20;
+b = 30;
+```
+
+En la consola puedo escribir el nombre de la Variable o Constante y me retornara su valor:
+
+```sh
+> a
+  20
+> b
+  30
+```
+
+**Nota**: Desde la consola podemos cambiar los valores de las variables o hacer cualquier tipo de cálculo:
+
+```sh
+> a = a * 3
+  60
+> a
+  60
+```
+
+**Nota**: Con los modulos podemos protejer un poco el código para que no sea tan manipulable desde la consola.
+
+También puedo definir una variable sin usar **`let`** o **`var`** pero sera **UNA MALA PRACTICA**
+
+```js
+c = 100;
+```
+
+#### Diferencias entre `let` y `var`
+
+**`var`** Es la forma antigua de definir variables.
 
 
 
