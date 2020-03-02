@@ -480,6 +480,37 @@ Para ejecutar hasta el siguiente breakpoint, para desactivar los breakpoints, et
 
 Posteriormente puedo eliminar mis breakpoints.
 
+### Depurar desde VSC
+
+En VSC empecemos por poner el breakpoint en la línea 3 igual como lo habiamos hecho en el navegador.
+
+<img src="images/c2/2-vsc-1.png">
+
+Y en nuestro menú de VSC seleccionamos la opción `Debug / Start Debugging`:
+
+<img src="images/c2/2-vsc-2.png">
+
+Como vemos hace algo muy parecido que en el navegador, se detiene en el breakpoint que habíamos marcado, tenemos unos botones muy parecidos para poder ir debuggeando, lo único diferente que tenemos aquí es que al principio JS hace un barrido de todas las variables (y funciones) que se usan y hace una especie de indice, las inicializa con el valor `undefined` eso lo tenemos en la parte izquierda superior, en la sección de VARIABLES. Vamos a pulsar el botón de siguiente línea.
+
+<img src="images/c2/2-vsc-3.png">
+
+Vemos que a ya tiene valor `a:10`, voy a pulsar varias veces el botón de siguiente línea:
+
+<img src="images/c2/2-vsc-4.png">
+
+Y vamos viendo como cada variable se va llenando con su correspondiente valor, finalmente pulso el botón para que ejecute el código restante:
+
+<img src="images/c2/2-vsc-5.png"> 
+
+Y finaliza la ejecución del programa. Es preciso hacer notar que para poder Debuggear en VSC necesitamos tener instalado NodeJS.
+
+Finalmente vamos a descomentar todos los comentarios.
+
+Pressionamos F5 para empezar a debugear y a medida que los `console` se vayan ejecutando estos apareceran en la pestaña `DEBUG CONSOLE`, es importante saberlo.
+
+<img src="images/c2/2-vsc-6.png"> 
+
+Si pulsamos en la línea de la salida de la consola nos llevara al código de esa línea.
 
 ## Orden y lugar de las importaciones 09:42
 
