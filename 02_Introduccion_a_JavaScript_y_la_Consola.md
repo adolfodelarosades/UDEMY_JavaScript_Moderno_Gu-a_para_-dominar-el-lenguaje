@@ -241,9 +241,60 @@ c = 100;
 
 #### Diferencias entre `let` y `var`
 
-**`var`** Es la forma antigua de definir variables.
+**`var`** Es la forma antigua de definir variables, pero que aun se sigue usando.
 
+### Versiones de JS
 
+* **1996**: LiveScript a JavaScript (estándar)
+* **1997**: ES1 (ECMAScript 1)
+* **2009**: ES5 (ECMAScript 5) Con muchas características nuevas.
+* **2015**: ES6/ES2015 (ECMAScript 2015) que fue la actualización más grande de JavaScript hasta el momento.
+* **2015**: Se estableció el año de nuevos lanzamientos de JavaScript
+* 2016/2017/2018/2019/2020/...
+
+#### ¿Qué versión debo de usar?
+
+* ES5:
+   * Soportada en todos los navegadores web.
+   
+* ES6/ES2015, ES7/ES2016, ES8/ES2017:
+   * Soportados por la  mayoría de navegadores modernos
+   * Pero no por todos los navegadores web
+   * Muchas características pueden ser implementadas con **polyfills**
+   
+#### Polyfill
+
+Es un código que provee el funcionamiento de una nueva característica de JavaScript (ES6), en versiones viejas como ES5.
+
+#### Ejemplo de Definición de Variables con `let`
+
+Existen varias formas de definir variables pero representan lo mismo:
+
+```sh
+let a = 10;
+let b = 20;
+let c = 40;
+let d = 50;
+let x = a + b;
+
+console.log(x); //30
+```
+
+```sh
+let a = 10, b = 20, c = 40, d = 50, x = a + b;
+
+console.log(x); //30
+```
+
+```sh
+let a = 10,
+    b = 20, 
+    c = 40, 
+    d = 50, 
+    x = a + b;
+
+console.log(x);
+```
 
 ## Introducción a la consola 10:10
 
