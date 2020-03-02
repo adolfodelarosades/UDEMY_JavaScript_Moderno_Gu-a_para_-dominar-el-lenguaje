@@ -378,7 +378,58 @@ Y la tabla la podemos ordenar Ascendente o Desendentemente por alguno de sus cam
 
 <img src="images/c2/2-console-6.png">
 
-## Depuración y breakpoints 10:23
+## Depuración y Breakpoints 10:23
+
+Vamos a partir recordando que tenemos dos archivos hasta el momento:
+
+`index.html`:
+
+```sh
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+`app.js`:
+
+```sh
+let a = 10,
+    b = 20, 
+    c = 'Hola', 
+    d = 'Spiderman', 
+    x = a + b;
+
+const saludo = c + d;
+
+
+// console.log('%c Mis Variables', 'color:yellow; font-weight: bold');
+// console.log({a});
+// console.log({b});
+// console.log({c});
+// console.log({d});
+
+c = 'Hola de nuevo';
+
+// console.table({a, b, c, d, x});
+```
+
+Al cargar `index.html` en el navegador en la consola no mostrara nada ya que hemos comentado todos los `console.log`, pero todo el código en `app.js` se ejecuto.
+
+Si cambiamos la pestaña `Console` por `Sources` veremos algo como lo siguiente:
+
+<img src="images/c2/2-debbug-1.png">
+
+Como podemos ver tenemos el archivo `index.html` que es el que estamos cargando y ademas también tenemos el archivo `app.js` que es una especie de dependencia del archivo `index.html` y por eso la carga. Como podemos ver esta todo nuestro código de JS.
+
+Tenemos dos formas de Depurar este código
+
 
 ## Orden y lugar de las importaciones 09:42
 
