@@ -422,13 +422,63 @@ c = 'Hola de nuevo';
 
 Al cargar `index.html` en el navegador en la consola no mostrara nada ya que hemos comentado todos los `console.log`, pero todo el código en `app.js` se ejecuto.
 
+
+Tenemos dos formas de Depurar este código:
+
+* Desde el Navegador Chrome
+* Desde VSC
+
+### Depurar desde el Navegador Chrome
+
 Si cambiamos la pestaña `Console` por `Sources` veremos algo como lo siguiente:
 
 <img src="images/c2/2-debbug-1.png">
 
 Como podemos ver tenemos el archivo `index.html` que es el que estamos cargando y ademas también tenemos el archivo `app.js` que es una especie de dependencia del archivo `index.html` y por eso la carga. Como podemos ver esta todo nuestro código de JS.
 
-Tenemos dos formas de Depurar este código
+Podemos colocar un **Breakpoint** en la línea 3 haciendo un click sobre el número de línea.
+
+<img src="images/c2/2-debbug-2.png">
+
+Una vez que tenemos el breakpoint recargamos nuestra página web y vemos como la ejecución se detiene en nuestra línea 3 gracias al breakpoint que hemos colocado.
+
+<img src="images/c2/2-debbug-3.png">
+
+Para que ejecute la línea tres y pase a la siguiente línea usamos el bóton de siguiente línea:
+
+<img src="images/c2/2-debbug-4.png">
+
+Como podemos observar a ejecutado la línea 3 en la parte derecha en `Script` ya nos indica que `a` tiene el valor de `10` y estamos listos para ejecutar la línea 4. Pulsamos el botón de siguiente línea:
+
+<img src="images/c2/2-debbug-5.png">
+
+Ahora ya tengo en `Script` el valor de `b:20`, vuelvo a pulsar en siguiente línea:
+
+<img src="images/c2/2-debbug-6.png">
+
+Ahora ya tengo en `Script` el valor de `c:Hola`, vuelvo a pulsar en siguiente línea:
+
+<img src="images/c2/2-debbug-6.png">
+
+También me puedo colocar dentro del código sobre los nombres de las variables y vere sus valores, para las cuales ya se ha ejecutado la línea, en las líneas sin ejecutar me dira que la variable aún no se define.
+
+Voy a pulsar varias veces el botón de siguiente línea hasta llegar a la última línea de código (vacia) y tenemos:
+
+<img src="images/c2/2-debbug-7.png">
+
+Observamos que los comentarios los ignoro y brinco a las líneas con código, hasta aquí nuestro código aun esta en espera vamos a pulsar el nuevamamente el botón siguiente línea.
+
+<img src="images/c2/2-debbug-8.png">
+
+Esto finaliza  el proceso de Debbug, si existiera código que renderizada HTML este se aparecería.
+
+Ademas del boton de siguiente línea tenemos más botones:
+
+<img src="images/c2/2-botones-debbug.png">
+
+Para ejecutar hasta el siguiente breakpoint, para desactivar los breakpoints, etc.
+
+Posteriormente puedo eliminar mis breakpoints.
 
 
 ## Orden y lugar de las importaciones 09:42
