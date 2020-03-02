@@ -76,7 +76,7 @@ Con JS podemos crear muchos tipos de aplicaciones:
 
 ## Hola Mundo 13:52
 
-### Hola Mundo Desde el Navegador
+### 1. Hola Mundo Desde el Navegador
 
 Cada navegador tiene su propia implementación del ECMAScript por lo que cada uno tiene su propia versión de JS.
 
@@ -97,7 +97,79 @@ Las anteriores son dos formas diferentes de hacer nuestro "Hola Mundo", la prime
 
 <img src="images/c2/2-hola-mundo-navegador.png">
 
+### 2. Hola Mundo Desde Consola Node
 
+Usando Node como interprete de JS.
+
+```js
+192:~ adolfodelarosa$ node --version
+v12.14.0
+
+192:~ adolfodelarosa$ node
+Welcome to Node.js v12.14.0.
+Type ".help" for more information.
+
+> console.log('Hola Mundo');
+Hola Mundo
+undefined
+> 
+```
+
+### 3. Hola Mundo Interpretando con Node
+
+Vamos a creaer el archivo `app.js` con el contenido:
+
+```js
+console.log('Hola Mundo');
+```
+
+Y desde la terminal ejecutamos el comando:
+
+```sh
+192:01-fundamentos adolfodelarosa$ node app.js
+Hola Mundo
+192:01-fundamentos adolfodelarosa$ 
+```
+
+Vemos como interpreta el contenido JS de nuestro archivo.
+
+### 4. Hola Mundo Dentro un Archivo HTML
+
+*Mala Practica*
+
+`index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        console.log('Hola Mundo desde HTML');
+    </script>
+</body>
+</html>
+```
+
+### 5. Hola Mundo Importando Archiivo JS Desde un Archivo HTML
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+Al abrir el archivo con el navegador y ver la Consola, veremos el mensaje `Hola Mundo`
+
+Aun que `<script src="app.js"></script>` puede ir dentro de la etiqueta `<head>` es recomendable ponerlo antes de cerrar la etiqueta body `</body>` para que se cargue todo nuestro código HTML y después los archivos JS evitando bloquear la página.
 
 ## Introducción a variables y comentarios 12:47
 
