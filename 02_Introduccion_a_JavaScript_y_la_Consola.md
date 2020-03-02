@@ -6,7 +6,6 @@
 
 ## Temas puntuales de la sección 00:17
 
-
 #### Temas de la sección
 
 En esta sección tocaremos los siguientes temas:
@@ -30,6 +29,8 @@ En esta sección tocaremos los siguientes temas:
 Recuerden que al final de la sección tendrán el código fuente para que lo descarguen en caso de que sea necesario para compararlo o bien para tenerlo como respaldo.
 
 ## JavaScript y su historia 04:44
+
+JS es un lenguaje interpretado.
 
 Creador: Brendan Eich, empleado de NetScape => LiveScript => JavaScript
 
@@ -73,7 +74,6 @@ Con JS podemos crear muchos tipos de aplicaciones:
    * React
    * Vue
       
-
 ## Hola Mundo 13:52
 
 ### 1. Hola Mundo Desde el Navegador
@@ -270,6 +270,8 @@ Es un código que provee el funcionamiento de una nueva característica de JavaS
 
 Existen varias formas de definir variables pero representan lo mismo:
 
+1) 
+
 ```sh
 let a = 10;
 let b = 20;
@@ -279,12 +281,15 @@ let x = a + b;
 
 console.log(x); //30
 ```
+2)
 
 ```sh
 let a = 10, b = 20, c = 40, d = 50, x = a + b;
 
 console.log(x); //30
 ```
+
+3)
 
 ```sh
 let a = 10,
@@ -296,7 +301,82 @@ let a = 10,
 console.log(x);
 ```
 
-## Introducción a la consola 10:10
+## Introducción a la Consola 10:10
+
+Los mensajes de Consola nos permiten no interferir con el flujo normal del programa, ya que solo imprimen lo que indiquemos en la consola y el flujo del programa continua a diferencia por ejemplo de los `alerts`.
+
+Existen varios tipos de mensajes de consola que se pueden usar:
+
+```js
+console.log(x);
+console.warn(x);
+console.error(x);
+console.info(x);
+```
+
+<img src="images/c2/2-console.png">
+
+El `console.log` puede recibir 1 o más argumentos:
+
+```js
+console.log('a', a);
+console.log('b', b);
+console.log('c', c);
+console.log('d', d);
+```
+
+Salida en la consola:
+
+<img src="images/c2/2-console-2.png">
+
+Es importante hacer notar en la salida en consola los colores el gris nos indica que es **texto** y el morado que es **número**, un detalle importante a tener en cuenta.
+
+Si no queremos escribir ambos argumentos podemos encerrar el valor a imprimir entre {}:
+
+```sh
+console.log({a});
+console.log({b});
+console.log({c});
+console.log({d});
+```
+
+Salida en la consola:
+
+<img src="images/c2/2-console-3.png">
+
+También puedo usar CSS en los `console.log`:
+
+```
+console.log('%c Mis Variables', 'color:yellow; font-weight: bold');
+console.log({a});
+console.log({b});
+console.log({c});
+console.log({d});
+```
+
+Salida en la consola:
+
+<img src="images/c2/2-console-4.png">
+
+Con `console` también puedo pintar una tabla:
+
+```js
+let a = 10,
+    b = 20, 
+    c = 'Hola', 
+    d = 'Spiderman', 
+    x = a + b;
+
+console.table({a, b, c, d, x});
+```
+
+Salida en la consola:
+
+<img src="images/c2/2-console-5.png">
+
+Y la tabla la podemos ordenar Ascendente o Desendentemente por alguno de sus campos.
+
+<img src="images/c2/2-console-6.png">
 
 ## Depuración y breakpoints 10:23
 
