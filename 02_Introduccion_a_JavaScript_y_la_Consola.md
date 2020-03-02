@@ -76,6 +76,29 @@ Con JS podemos crear muchos tipos de aplicaciones:
 
 ## Hola Mundo 13:52
 
+### Hola Mundo Desde el Navegador
+
+Cada navegador tiene su propia implementación del ECMAScript por lo que cada uno tiene su propia versión de JS.
+
+Vamos a abrir Google Chrome y con F12 las Herramientas de Desarrollador en la pestaña Consola.
+
+Escribimos lo siguiente:
+
+```js
+> console.log('Hola Mundo');
+  Hola Mundo
+  undefined
+
+> document.write('Hola Mundo');
+undefined
+```
+
+Las anteriores son dos formas diferentes de hacer nuestro "Hola Mundo", la primera saca el mensaje en la Consola y la segunda en el HTML.
+
+<img src="images/c2/2-hola-mundo-navegador.png">
+
+
+
 ## Introducción a variables y comentarios 12:47
 
 ## Introducción a la consola 10:10
