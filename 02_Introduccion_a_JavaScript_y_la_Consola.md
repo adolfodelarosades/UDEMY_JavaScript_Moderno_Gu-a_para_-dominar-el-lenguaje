@@ -740,7 +740,7 @@ El error que nos indica aquí es `Uncaught ReferenceError: Cannot access 'miNomb
 
 **POR ESTAS DOS RAZONES USAREMOS `let` O `const` EN LUGAR DE `var`**
 
-## Prompt, confirm y alert 10:49
+## Alert, Prompt y Confirm  10:49
 
 Vamos a ver tres formas "Nativas" de ingresar información por parte del usuario a un programa JS. Las tres instrucciones que veremos son bloqueantes, es decir que el código se detiene hasta responder a estas instrucciones.
 
@@ -758,6 +758,54 @@ Al ejecutar `index.html` en el navegador tenemos:
 Al presionar Aceptar la ejecución continua.
 
 ### Prompt
+
+`Prompt` nos permite recuperar la respuesta del usuario. Acepta dos parámetros, el primero será el título y el segundo opcional puede ser el valor por defecto y retorna la respuesta del usuario. Veamos un ejemplo
+
+
+Si en `app.js` solo tenemos:
+
+```js
+let nombre = prompt('¿Cuál es tu nombre?', 'Introduce tu nombre');
+console.log(nombre);
+```
+
+Al ejecutar `index.html` en el navegador tenemos:
+
+<img src="images/c2/2-prompt-1.png">
+
+Si introducimos el nombre  
+
+<img src="images/c2/2-prompt-2.png">
+
+y damos Aceptar tenemos:
+
+<img src="images/c2/2-prompt-3.png">
+
+Vemos en la consola la respuesta que se ingreso, pero tenemos más respuestas que el usuario pueda ingresar o no ingresar.
+Si no hay respuesta por default y no se ingresa nada retornara una cadena vacía. Si se pulsa el botón Cancelar nos retorna un valor `null`.
+
+### Confirm
+
+`Confirm` Acepta un parámetro para poner un título, y regresa un valor Booleano dependiendo del botón que se pulse como respuesta.
+
+Si en `app.js` solo tenemos:
+
+```js
+let respuesta = confirm('¿Deseas continuar?');
+console.log(respuesta);
+```
+
+Al ejecutar `index.html` en el navegador tenemos:
+
+<img src="images/c2/2-confirm-1.png">
+
+Si pulsamos Aceptar la respuesta sera `true`: 
+
+<img src="images/c2/2-confirm-2.png">
+
+y si damos Cancelar tenemos `false`:
+
+<img src="images/c2/2-confirm-3.png">
 
 
 ## Código fuente de la sección 00:08
