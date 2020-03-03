@@ -815,8 +815,29 @@ Tanto Alert, Prompt y Confirm son métodos que pertenecen al objeto global windo
 
 **Por lo que si ejecutamos este código fuera del navegador no funcionara ya que no tenemos la instancia del objeto window.**
 
+Para demostrarlo vamos a ejecutar el archivo `app.js` con Node.
 
+<img src="images/c2/2-error-node.png">
 
+Nos indica `confirm is not defined` como estamos ejecutando en la terminal es obvio que no puede pintar la ventana, pero como ya vimos nuestro código es totalmente operativo en el navegador.
 
+En Node tenemos algo similar a `window` es el objeto `global`, vamos a poner en `app.js`:
+
+```js
+console.log(global);
+```
+
+Si ejecutamos el navegador nos marcara el siguiente error:
+
+```sh
+app.js:1 Uncaught ReferenceError: global is not defined
+    at app.js:1
+```
+
+Lo cual es logico por que no hemos definido esto en `app.js`, pero si lo ejecutamos desde Node tenemos:
+
+<img src="images/c2/2-node.png">
+
+Por lo que podemos concluir que debemos tener en cuenta donde vamos a ejecutar nuestro código JS en el FrontEnd o en el BackEnd, pero básicamente todo lo referente a el objeto window no funcionara con Node.
 
 ## Código fuente de la sección 00:08
