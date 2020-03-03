@@ -512,7 +512,11 @@ Pressionamos F5 para empezar a debugear y a medida que los `console` se vayan ej
 
 Si pulsamos en la línea de la salida de la consola nos llevara al código de esa línea.
 
-## Orden y lugar de las importaciones 09:42
+## Orden y Lugar de las Importaciones 09:42
+
+El Orden de las importaciones de los diferentes archivos JS importa.
+
+
 
 ## Principal problema con la inicialización de variables con Var 07:25
 
