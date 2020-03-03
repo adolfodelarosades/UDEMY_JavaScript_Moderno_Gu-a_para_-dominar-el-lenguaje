@@ -734,11 +734,11 @@ Ya no nos marca ningun error pero el valor de la variable es `undefined`, esto e
 
 Si cambiamos `var` por `let` vemos lo que pasa:
 
+<img src="images/c2/2-initialization.png">
 
+El error que nos indica aquí es `Uncaught ReferenceError: Cannot access 'miNombre' before initialization` lo que nos indica que no podemos usar `miNombre` antes de ser inicializada, con esto nos queda muy claro observar cual es concretamente el error.
 
-
-
-
+**POR ESTAS DOS RAZONES USAREMOS `let` O `const` EN LUGAR DE `var`**
 
 ## Prompt, confirm y alert 10:49
 
