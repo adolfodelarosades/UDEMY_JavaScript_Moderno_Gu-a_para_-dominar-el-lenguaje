@@ -512,10 +512,153 @@ Pressionamos F5 para empezar a debugear y a medida que los `console` se vayan ej
 
 Si pulsamos en la línea de la salida de la consola nos llevara al código de esa línea.
 
-## Orden y Lugar de las Importaciones 09:42
+## Lugar y Orden de las Importaciones 09:42
 
-El Orden de las importaciones de los diferentes archivos JS importa.
+El orden de las importaciones de los diferentes archivos JS importa.
 
+### Lugar donde se colocan las Importaciones 
+
+Empecemos por ver las diferencias en colocar el archivo JS en el `<head>` o en el `<body>`.
+
+Archivo `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Lorem ipsum dolor</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta corporis sed consequatur illo culpa blanditiis delectus eius nulla fugiat harum, vel aperiam doloribus eveniet minus quibusdam facilis ad laborum. Inventore?</p>    
+</body>
+</html>
+```
+
+Archivo `app.js`:
+
+```js
+alert();
+```
+
+Cuando cargamos nuestro archivo `index.html` en el navegador, el cual a su vez carga `app.js` el cual tiene una instrucción bloqueante la cual detiene toda la ejecución de nuestra página.
+
+<img src="images/c2/2-head.png">
+
+Una vez que preesionamos sobre el botón Aceptar la ejecución del código continua y podemos ver el contenido de la página.
+
+<img src="images/c2/2-head-2.png">
+
+Ahora vamos a mover el script antes de cerrar el body.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Lorem ipsum dolor</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta corporis sed consequatur illo culpa blanditiis delectus eius nulla fugiat harum, vel aperiam doloribus eveniet minus quibusdam facilis ad laborum. Inventore?</p>    
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+Cuando cargamos nuestro archivo `index.html` en el navegador, tenemos:
+
+<img src="images/c2/2-body.png">
+
+Como podemos ver se carga nuestro html y después el js, por lo que tenemos la impresión de que la página carga más rápido, por lo que es mejor practica el colocar nuestros archivos JS antes de cerrar el body.
+
+### Orden de las Importaciones
+
+Cuando tenemos varios archivos JS es importante el orden en que se importan.
+
+Cuando se tienen varios archivos JS es mejor crear una estructura dentro de nuestro proyecto:
+
+<img src="images/c2/2-estructura.png">
+
+Vemos una carpeta `assets` dentro dos carpetas `css` y `js` en esta última meteremos todos los archivos JS.
+
+Como hemos movido nuestro `app.js` si intentamos cargar nuestro `index.html` tendremos el siguiente error:
+
+<img src="images/c2/2-error-js.png">
+
+Esto es por que no encuentra el JS, hay que cambiar la ruta.
+
+```sh
+<script src="assets/js/app.js"></script>
+```
+
+si cargamos nuevamente nuestro `index.html` ya no aparece el error. Es importante activar la opción `Disable cache` en la pestaña `Network` para forzar que siempre se carguen todos los cambios, en modo desarrollador.
+
+<img src="images/c2/2-disable-cache.png">
+
+Ok para este ejemplo vamos a tener 3 archivos:
+
+`index.html`:
+
+```sh
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Lorem ipsum dolor</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta corporis sed consequatur illo culpa blanditiis delectus eius nulla fugiat harum, vel aperiam doloribus eveniet minus quibusdam facilis ad laborum. Inventore?</p>    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/alerts.js"></script>
+</body>
+</html>
+```
+
+`app.js`:
+
+```sh
+var miNombre = "Adolfo";
+```
+
+`alerts.js`:
+
+```sh
+console.log(miNombre);
+```
+
+Al usar **var** la variable la coloca dentro de un objeto global llamado **window** lo cual hoy en día no es una buena practica. Lo cual podemos comprobar si en la consola escribimos `window`:
+
+<img src="images/c2/2-minombre.png">
+
+Ahora si en nuestro archivo `index.html` invertimos los imports de los JS:
+
+```sh
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Lorem ipsum dolor</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta corporis sed consequatur illo culpa blanditiis delectus eius nulla fugiat harum, vel aperiam doloribus eveniet minus quibusdam facilis ad laborum. Inventore?</p>    
+    
+    <script src="assets/js/alerts.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+```
+
+Nos indica el error `Uncaught ReferenceError: miNombre is not defined     at alerts.js:1`:
+
+<img src="images/c2/2-not-defined.png">
+
+Lo cual es lógico por que cuando carga `alerts.js` no hemos definido ninguna variable `miNombre`, lo cual hacemos en el archivo `app.js`.
 
 
 ## Principal problema con la inicialización de variables con Var 07:25
