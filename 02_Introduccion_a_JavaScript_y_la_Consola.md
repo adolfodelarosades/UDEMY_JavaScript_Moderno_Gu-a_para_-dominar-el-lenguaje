@@ -841,3 +841,8 @@ Lo cual es logico por que no hemos definido esto en `app.js`, pero si lo ejecuta
 Por lo que podemos concluir que debemos tener en cuenta donde vamos a ejecutar nuestro código JS en el FrontEnd o en el BackEnd, pero básicamente todo lo referente a el objeto window no funcionara con Node.
 
 ## Código fuente de la sección 00:08
+
+Código de la sección
+Pueden descargar el código del material adjunto o bien descargarlo del siguiente enlace que los lleva al repositorio del proyecto.
+
+[GitHub - Fin de la sección 2](https://github.com/Klerith/javascript-basics/releases/tag/v0.0.1)
