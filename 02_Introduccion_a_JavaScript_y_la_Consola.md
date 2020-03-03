@@ -742,4 +742,22 @@ El error que nos indica aquí es `Uncaught ReferenceError: Cannot access 'miNomb
 
 ## Prompt, confirm y alert 10:49
 
+Vamos a ver tres formas "Nativas" de ingresar información por parte del usuario a un programa JS. Las tres instrucciones que veremos son bloqueantes, es decir que el código se detiene hasta responder a estas instrucciones.
+
+### Alert
+
+Si en `app.js` solo tenemos:
+
+```js
+alert("Hola Mundo!!!");
+```
+Al ejecutar `index.html` en el navegador tenemos:
+
+<img src="images/c2/2-alert.png">
+
+Al presionar Aceptar la ejecución continua.
+
+### Prompt
+
+
 ## Código fuente de la sección 00:08
