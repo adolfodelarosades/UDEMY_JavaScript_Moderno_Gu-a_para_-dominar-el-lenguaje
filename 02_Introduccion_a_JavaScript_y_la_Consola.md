@@ -660,8 +660,28 @@ Nos indica el error `Uncaught ReferenceError: miNombre is not defined     at ale
 
 Lo cual es lógico por que cuando carga `alerts.js` no hemos definido ninguna variable `miNombre`, lo cual hacemos en el archivo `app.js`.
 
+Finalmente vamos a volver a invertir el orden de los JS y eliminar el contenido de `alerts.js`.
 
-## Principal problema con la inicialización de variables con Var 07:25
+## Principal Problema con la Inicialización de Variables con Var 07:25
+
+### Al definir Variables con `var` puedo Remplazar Propiedades y Objetos del Objeto Global Windows
+
+Al definir variables con `var` puedo accidental o concientemente remplazar los valores originales de Propiedades y Objetos del Objeto Global Windows, lo cual puede ocacionar algun problema. Vamos a cargar la vista Resposive de nuestro página y vamos a imprimir los valores de las propiedades `outerWidth` y `outerHeight`.
+
+<img src="images/c2/2-window-1.png">
+
+Vemos como los valores impresos coinciden con lo que contienen las propiedades del objeto global **window**.
+
+Si cambio las dimenciones de mi ventana necesito imprimir nuevamente las propiedades para conocer sus nuevos valores.
+
+<img src="images/c2/2-window-2.png">
+
+Que pasaria si definiera en mi archivo `app.js` la variable `outerWidth` con valor de `1000000`:
+
+```sh
+var outerWidth = 1000000;
+```
+
 
 ## Prompt, confirm y alert 10:49
 
