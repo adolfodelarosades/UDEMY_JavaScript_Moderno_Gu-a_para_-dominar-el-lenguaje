@@ -807,5 +807,16 @@ y si damos Cancelar tenemos `false`:
 
 <img src="images/c2/2-confirm-3.png">
 
+### Métodos Pertenecientes al Objeto Global `window`
+
+Tanto Alert, Prompt y Confirm son métodos que pertenecen al objeto global window, que pertenece al navegador.
+
+<img src="images/c2/2-metodos.png">
+
+**Por lo que si ejecutamos este código fuera del navegador no funcionara ya que no tenemos la instancia del objeto window.**
+
+
+
+
 
 ## Código fuente de la sección 00:08
