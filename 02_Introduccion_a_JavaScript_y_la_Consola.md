@@ -664,7 +664,7 @@ Finalmente vamos a volver a invertir el orden de los JS y eliminar el contenido 
 
 ## Principal Problema con la Inicialización de Variables con Var 07:25
 
-### Al definir Variables con `var` puedo Remplazar Propiedades y Objetos del Objeto Global Windows
+### 1. Al definir Variables con `var` puedo Remplazar Propiedades y Objetos del Objeto Global Windows
 
 Al definir variables con `var` puedo accidental o concientemente remplazar los valores originales de Propiedades y Objetos del Objeto Global Windows, lo cual puede ocacionar algun problema. Vamos a cargar la vista Resposive de nuestro página y vamos a imprimir los valores de las propiedades `outerWidth` y `outerHeight`.
 
@@ -681,6 +681,63 @@ Que pasaria si definiera en mi archivo `app.js` la variable `outerWidth` con val
 ```sh
 var outerWidth = 1000000;
 ```
+
+Una vez hecho esto recargamos la página e imprimimos  `window.outerWidth`.
+
+<img src="images/c2/2-window-3.png">
+
+En `window.outerWidth` tengo el valor de `1000000` pero se que el valor real debería ser de `400`, hemos puesto un valor muy grande para que resalte pero si el valor fuera muy aproximado al real como `405`, sería muy dificil rastrear el error para saber que hemos cambiado su valor manualmente.
+
+Si en lugar de definir la variable con `var` usamos `let` o `const`.
+
+```sh
+let outerWidth = 1000000;
+const outerHeight = 700;
+```
+
+Una vez hecho esto recargamos la página e imprimimos  `window.outerWidth` y `window.outerHeight`, tendremos los valor que corresponde.
+
+<img src="images/c2/2-window-4.png">
+
+### 2. Con `var` puedo Usar Variables Antes de Definirlas
+
+Si en `app.js` solo tenemos:
+
+```sh
+console.log(miNombre);
+```
+
+y cargamos la página tendremos:
+
+<img src="images/c2/2-not-defined-2.png">
+
+Un error por que no hemos definido la variable `miNombre`, pero si ahora en `app.js` tenemos:
+
+```sh
+console.log(miNombre);
+
+/* 
+
+ MUCHO CÓDIGO 
+ ...
+
+*/
+// Fin del Archivo
+var miNombre = 'Adolfo';
+```
+
+y cargamos la página tendremos:
+
+<img src="images/c2/2-undefined.png">
+
+Ya no nos marca ningun error pero el valor de la variable es `undefined`, esto es por que al momento de usar la variable no se ha inicializado su valor, pero como JS hace un barrido inicial sabe que ya esta definida. Cualquier variable no inicializada pero si definida tendra el valor **`undefined`**. Esto podria ocacionar ciertos problemas en algún momento dado y podria ser dificil de detectarlo.
+
+Si cambiamos `var` por `let` vemos lo que pasa:
+
+
+
+
+
 
 
 ## Prompt, confirm y alert 10:49
